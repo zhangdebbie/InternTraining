@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Component on and emit event</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="counter-event-example">
+    <div id="counter-event-example">
+        <p>{{ total }}</p>
+        <button-counter v-on:parent-increment="incrementTotal"></button-counter>
+        <button-counter v-on:parent-increment="incrementTotal"></button-counter>
+    </div>
+</div>
+<script>
+    Vue.component('button-counter', {
+        template: '<button v-on:click="increment">{{ counter }}</button>',
+        data: function () {
+            return {
+                counter: 0
+            }
+        },
+        methods: {
+            increment: function () {
+                this.counter += 1
+                this.$emit('parent-increment')
+            }
+        },
+    })
+    new Vue({
+        el: '#counter-event-example',
+        data: {
+            total: 0
+        },
+        methods: {
+            incrementTotal: function () {
+                this.total += 1
+            }
+        }
+    })
+</script>
+</body>
+</html>

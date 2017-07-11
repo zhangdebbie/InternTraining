@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Dynamic Component</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="example">
+    <component v-bind:is="currentView" test-param="Test Param">
+        <!-- component changes when vm.currentView changes! -->
+    </component>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#example',
+        data: {
+            currentView: 'home'
+        },
+        components: {
+            home: {
+                props: ['testParam'],
+                template: '<b>This is home component ({{testParam}})</b>'
+            },
+            posts: {
+                template: '<b>This is posts component</b>'
+            },
+            archive: {
+                template: '<b>This is archive component</b>'
+            }
+        }
+    })
+</script>
+</body>
+</html>

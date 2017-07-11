@@ -1,0 +1,37 @@
+<html>
+<title>AngularJS Directives</title>
+<script src="angular.min.js"></script>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<my-customized-table headers="headers" data="data"></my-customized-table>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller('myCtrl', function($scope) {
+        $scope.headers= ['C11', 'C12', 'C13'];
+        $scope.data= [['A1', 'A2'], [1,2,3], [-1, -2, -3]];
+    });
+    app.directive("myCustomizedTable", function() {
+        return {
+            restrict : "E", // \\zhangan2-3-w7\share folder
+            scope: {
+                headers: '=?',
+                data: '=?' // same as '=myValue2'
+            },
+            template : "<table cellspacing='1' cellpadding='1' border='1px solid black' width='800'>" +
+            "<thead>" +
+            "<th ng-repeat='h in headers'>{{h}}</th>" +
+            "</thead><tbody>" +
+                "<tr ng-repeat='r in data'>" +
+                "<td ng-repeat='c in r'>{{c}}</td>" +
+            "</tr>" +
+            "</tbody></table>",
+            link: function (scope, element, attr) {
+                scope.myValue1 = scope.myValue1 || 'Default value 1';
+                scope.myValue2 = scope.myValue2 || 'Default value 2';
+            }
+        };
+    });
+</script>
+
+</body>
+</html>

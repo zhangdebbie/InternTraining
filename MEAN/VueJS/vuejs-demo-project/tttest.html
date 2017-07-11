@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>tt</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<script>
+    var vm=new Vue({
+        data:{
+            a:1
+        },
+        created: function (){
+            console.log('a is : ' + this.a)
+        }
+    })
+</script>
+<!--<script>-->
+    <!--var data={a:1}-->
+    <!--var vm = new Vue({-->
+        <!--el:"#sample",-->
+        <!--data:data-->
+    <!--})-->
+
+    <!--vm.$data === data // -> true-->
+    <!--vm.$el === document.getElementById('sample')-->
+
+    <!--//$watch is a method of instance-->
+    <!--vm.$watch('a',function(newVal, oldVal){-->
+        <!--//this is callback function which will vm.a-->
+    <!--})-->
+<!--</script>-->
+<!--<div id="app2">-->
+    <!--<span :title="message">-->
+        <!--hover your mouse over me for a few seconds to see my dynxxxxxxxx-->
+    <!--</span>-->
+<!--</div>-->
+<!--<script>-->
+    <!--var app2 = new Vue({-->
+        <!--el:'#app2',-->
+        <!--data:{-->
+            <!--message: 'you loaded this page on '+ new Date()-->
+        <!--}-->
+    <!--})-->
+<!--</script>-->
+
+<!--<div id="app3">-->
+    <!--<p v-if="seen">now you see me</p>-->
+<!--</div>-->
+<!--<script>-->
+    <!--var app3 = new Vue({-->
+        <!--el: '#app3',-->
+        <!--data:{-->
+            <!--seen: false-->
+        <!--}-->
+    <!--})-->
+<!--</script>-->
+<!--<div id="app4">-->
+    <!--<ol>-->
+        <!--<li v-for="todo in todos">-->
+            <!--{{todo.text}}-->
+        <!--</li>-->
+    <!--</ol>-->
+<!--</div>-->
+<!--<script>-->
+<!--var app4tt = new Vue({-->
+    <!--el: '#app4',-->
+    <!--data:{-->
+        <!--todos:[-->
+            <!--{text: 'learn js'},-->
+            <!--{text: 'learn vue'},-->
+            <!--{text: 'learn xx'},-->
+            <!--{text: 'learn yy'},-->
+            <!--{text: 'learn zz'},-->
+            <!--{text: 'learn zzxxxx'}-->
+        <!--]-->
+    <!--}-->
+<!--})-->
+<!--</script>-->
+<!--<div id="app5">-->
+    <!--<p>{{ message }}</p>-->
+    <!--<button @click="reverseMessage">fanzhuang message</button>-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--var app5_tt = new Vue({-->
+        <!--el: '#app5',-->
+        <!--data:{-->
+            <!--message:'hello budssssdy, Vue.js'-->
+        <!--},-->
+        <!--methods:{-->
+            <!--reverseMessage: function(){-->
+                <!--this.message = this.message.split('').reverse().join('')-->
+            <!--}-->
+        <!--}-->
+    <!--})-->
+<!--</script>-->
+
+<!--<div id="app6">-->
+    <!--<p>{{ message }}</p>-->
+    <!--<input v-model="message">-->
+<!--</div>-->
+<!--<script>-->
+    <!--var app6ttzhang=new Vue({-->
+        <!--el: '#app6',-->
+        <!--data: {-->
+            <!--message: 'hello vue!@!@#%$'-->
+        <!--}-->
+    <!--})-->
+<!--</script>-->
+
+<!--<script>-->
+    <!--// 定义一个被命名为 todo-item 的新组件-->
+    <!--Vue.component('todo-item', {-->
+        <!--template: '<li>this is a todo</li>'-->
+    <!--})-->
+<!--</script>-->
+
+<!--<ol>-->
+    <!--<todo-item></todo-item>-->
+<!--</ol>-->
+
+
+
+<!--<ol>-->
+    <!--&lt;!&ndash;创建一个 todo-item 组件的实例&ndash;&gt;-->
+    <!--<todo-item></todo-item>-->
+<!--</ol>-->
+
+
+<!--<script>-->
+    <!--// 定义一个被命名为 todo-item 的新组件-->
+    <!--Vue.component('todo-item', {-->
+        <!--// todo-item 组件现在接受一个 "prop"，-->
+        <!--// 类似于一个自定义属性。-->
+        <!--// 此 prop 名为 todo。-->
+        <!--props: ['todo'],-->
+        <!--template: '<li>{{ todo.text }}</li>'-->
+    <!--})-->
+<!--</script>-->
+
+<!--<script>-->
+    <!--var data = {a:1}-->
+    <!--var vm= new Vue({-->
+        <!--data:data-->
+    <!--})-->
+
+    <!--if(vm.a!=data.a ? data.a=7 : vm.a=9 ){-->
+        <!--var a =1-->
+    <!--}-->
+<!--//    data.a=3-->
+<!--//    vm.a-->
+<!--</script>-->
+
+<!--<script>-->
+    <!--var data = {a:1}-->
+    <!--var vm= new Vue({-->
+        <!--data:data-->
+    <!--})-->
+
+    <!--if(vm.a!=data.a ? data.a=7 : vm.a=9 ){-->
+        <!--var a =1-->
+    <!--}-->
+    <!--//    data.a=3-->
+    <!--//    vm.a-->
+<!--</script>-->
+</body>
+</html>

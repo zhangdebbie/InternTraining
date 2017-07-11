@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Lifecycle</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{message}}</p>
+    <div><button @click="updateMessage">Update Message</button> <button @click="doDestroy">Destroy</button></div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: ''
+        },
+        methods: {
+            updateMessage: function () {
+                this.message = "Updated at : " + new Date();
+            },
+            doDestroy: function () {
+                this.$destroy();
+            }
+        },
+        beforeCreate: function () {
+            this.message = "beforeCreate";
+            console.log(this.message);
+        },
+        created: function () {
+            this.message = "created";
+            console.log(this.message);
+        },
+        beforeMount: function () {
+            this.message = "beforeMount";
+            console.log(this.message);
+        },
+        mounted: function () {
+            this.message = "mounted";
+            console.log(this.message);
+        },
+        beforeUpdate: function () {
+            console.log("beforeUpdate");
+        },
+        updated: function () {
+            console.log("updated");
+        },
+        beforeDestroy: function () {
+            this.message = "beforeDestroy";
+            console.log(this.message);
+        },
+        destroyed: function () {
+            this.message = "destroyed";
+            console.log(this.message);
+        }
+    })
+</script>
+</body>
+</html>

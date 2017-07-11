@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Interpolation Demo</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>basic data binding: {{basicDataBinding}}</p>
+    <button @click="updateBasicBindingData">Update</button>
+    <hr>
+    <p v-once>v-once data binding: {{vOnceData}}</p>
+    <button @click="updateVOnceBindingData">Update</button>
+    <hr>
+    <p>v-html data binding: </p>
+    <div v-html="rawHtml"></div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            basicDataBinding: 'This is the original value of basic data.',
+            vOnceData: 'This is the original value of v-once data.',
+            rawHtml: '<strong style="color: blueviolet;">This is html code</strong>'
+        },
+        methods: {
+            updateBasicBindingData: function () {
+                this.basicDataBinding = 'This is the updated binding data, updated at ' + new Date();
+            },
+            updateVOnceBindingData: function () {
+                this.vOnceData = 'This is the updated v-once binding data, updated at ' + new Date();
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Computed and Method demo</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <p>{{getMessage()}}</p>
+  <p>{{getMessageComputed}}</p>
+    <button @click="updateMessage">Update Message</button>
+</div>
+<script>
+    var app2 = new Vue({
+        el: '#app',
+        data: {
+            message: 'You loaded this page on ' + new Date()
+        },
+        methods: {
+            getMessage: function () {
+                return this.message;
+            },
+            updateMessage: function () {
+                this.message = 'Message updated on ' + new Date()
+            }
+        },
+        computed: {
+            getMessageComputed: function () {
+                return this.message;
+            }
+        }
+    })
+</script>
+</body>
+</html>

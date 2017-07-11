@@ -1,0 +1,28 @@
+<html>
+<title>AngularJS Directives</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<body ng-app="myApp">
+
+<my-first-directive v1="'Test value1'" my-value2="'Test Value2'"></my-first-directive>
+<script>
+var app = angular.module("myApp", []);
+app.directive("myFirstDirective", function() {
+    return {
+		restrict : "AE", // \\zhangan2-3-w7\share folder
+		scope: {
+			myValue1: '=v1',
+			myValue2: '=?' // same as '=myValue2'
+		},
+        template : "<h1>This is my first directive!</h1>" +
+        "<p>myValue1: {{myValue1}}</p>" +
+        "<p>myValue2: {{myValue2}}</p>",
+		link: function (scope, element, attr) {
+			scope.myValue1 = scope.myValue1 || 'Default value 1';
+			scope.myValue2 = scope.myValue2 || 'Default value 2';
+		}
+    };
+});
+</script>
+
+</body>
+</html>

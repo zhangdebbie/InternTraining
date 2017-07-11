@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Binding HTML Classes</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app-2">
+    <div class="static"
+         v-bind:class="{ active: isActive, 'text-danger': hasError }">
+    </div>
+    <div v-bind:class="classObject"></div>
+    <div v-bind:class="[activeClass, errorClass]"></div>
+    <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+
+    <my-component class="baz boo"></my-component>
+</div>
+<script>
+    Vue.component('my-component', {
+        template: '<p class="foo bar">Hi</p>'
+    });
+    var app2 = new Vue({
+        el: '#app-2',
+        data: {
+            isActive: true,
+            hasError: false,
+            classObject: {
+                active: true,
+                'text-danger': false
+            },
+            activeClass: 'active',
+            errorClass: 'text-danger'
+        }
+    });
+</script>
+</body>
+</html>
