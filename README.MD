@@ -1,30 +1,25 @@
-# full-stack-web-course
-Full Stack Web Development Course. Back-end -> DB -> Front-end -> Engineering
-
-### Lesson outline links
- 1. [back-end](https://github.com/yellowb/full-stack-web-course/blob/master/back-end/outline.md)
- 2. [db](https://github.com/yellowb/full-stack-web-course/blob/master/db/outline.md)
- 3. [front-end](https://github.com/yellowb/full-stack-web-course/blob/master/front-end/outline.md)
- 4. [engineering](https://github.com/yellowb/full-stack-web-course/blob/master/engineering/outline.md)
- 5. [small-project](https://github.com/yellowb/full-stack-web-course/blob/master/small-project/outline.md)
+# Intern Training
+Full Stack Web Development Course. 
+included:
+ 1. AngularJs/VueJs
+ 2. MongoDB
+ 3. NodeJs/Express
  
-### 当前TODO List（@2017-06-9）
-
- 1. ~~请各位先review每个目录下的outline，看是否有需要改动的地方。~~ 
- 2. ~~确定课程时长。~~（6天（week1 Mon~Fri）+（week2 Mon））
- 3. ~~前端讲AngularJS还是Vue.js?~~ (因为Vue.JS以前没讲过，不知道效果，也没有PPT，所以先plan讲angularJS 1先. Vue.JS可以先作为team内部share先制作一次，之后再用到ITA上)
- 4. ~~每个组看看提纲里有哪些是必须的~~
- 5. smallproject 题目要增加复杂度
- 6. **6月开始要动手做PPT了**
+### Lesson outline links
+ 1. [AngularJS](https://github.com/zhangdebbie/InternTraining/blob/master/MEAN/Angular%20JS/outline.md)
+ 2. [VueJS](https://github.com/zhangdebbie/InternTraining/new/master/MEAN/VueJS/outline.md)
+ 3. [MongoDB](https://github.com/zhangdebbie/InternTraining/new/master/MEAN/Mongo/outline.md)
+ 4. [NodeJS](https://github.com/zhangdebbie/InternTraining/tree/master/MEAN/NodeJS/outline.md)
+ 5. [Express](https://github.com/zhangdebbie/InternTraining/tree/master/MEAN/Express/outline.md)
+ 
  
 ### Rule
- 1. 每部门课程放在对应子目录下
+ 1. 每课程放在对应子目录下
  2. 更新了课件要一起更新outline.md。
  3. 讨论请去Issues.
 
 ### Updates
-
- 1. 创建Repo，给出旧课程大纲与初步的新课程大纲。[by yellow @ 2017-04-25]
+ 1. 创建Repo，给出旧课程大纲与初步的新课程大纲。[]
  
 ### Issues
 本项目有若干待解决的问题，例如**如下几个**。讨论请**移步到Issues** :)
