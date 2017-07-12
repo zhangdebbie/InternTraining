@@ -1,6 +1,5 @@
-# Intern Training
-Full Stack Web Development Course. 
-included:
+# Intern Training (Please Check InternTrainingPlan.xlsx firstly.)
+Full Stack Web Development Course which included:
  1. AngularJs/VueJs
  2. MongoDB
  3. NodeJs/Express
